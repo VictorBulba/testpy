@@ -9,7 +9,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         self.send_response(HTTPStatus.OK)
         self.end_headers()
-        msg = 'Hello! Your pipa is %s' % (self.path)
+        msg = 'Hello! Ваша пипа is %s' % (self.path)
         self.wfile.write(msg.encode())
 
 port = int(os.getenv('PORT', 80))
